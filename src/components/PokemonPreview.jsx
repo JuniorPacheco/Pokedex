@@ -14,7 +14,7 @@ const PokemonPreview = ({ pokemonURL, onClick }) => {
 
   return (
     <article
-      onClick={onClick}
+      onClick={() => onClick(pokemon)}
       className="text-center bg-white rounded-[30px] relative font-semibold capitalize pb-4 shadow-lg shadow-slate-400/10 border-2 border-transparent hover:border-slate-200 cursor-pointer group grid gap-2"
     >
       <header className="h-9">
