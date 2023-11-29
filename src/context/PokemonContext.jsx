@@ -21,7 +21,8 @@ const PokemonProvider = ({ children }) => {
     );
 
     const { id, name, height, weight, stats, types, abilities } = pokemonInfo;
-
+    const evolutions = await getEvolutions(dataEvolution);
+    console.log(evolutions);
     setPokemonDetail({
       id,
       name,
@@ -31,7 +32,7 @@ const PokemonProvider = ({ children }) => {
       types: formatTypes(types),
       abilities: formatAbilities(abilities),
       description: getPokemonDescription(dataSpecies),
-      evolutions: getEvolutions(dataEvolution),
+      evolutions,
     });
     setShowDetailPokemon(true);
   };
