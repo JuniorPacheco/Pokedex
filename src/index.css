@@ -7,3 +7,7 @@
 .pixelated {
   image-rendering: pixelated;
 }
+
+.hidden-scroll::-webkit-scrollbar {
+  display: none;
+}
