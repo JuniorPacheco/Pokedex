@@ -22,6 +22,13 @@ const formatStats = (stats) => {
   return newStats;
 };
 
+const getImageByPokemon = (sprites) => {
+  return (
+    sprites.versions["generation-v"]["black-white"].animated.front_default ??
+    sprites.versions["generation-v"]["black-white"].front_default
+  );
+};
+
 const formatTypes = (types) => types.map((type) => type.type.name);
 
 const formatAbilities = (abilities) =>
@@ -76,4 +83,5 @@ export {
   getPokemonDescription,
   getEvolutions,
   assignInfoToEvolutions,
+  getImageByPokemon,
 };
